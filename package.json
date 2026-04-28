@@ -1,0 +1,26 @@
+{
+  "name": "secure-llm-proxy",
+  "version": "1.2.0",
+  "description": "OpenAI-compatible proxy with PII scrubbing, audit logging, and enhanced privacy controls. Drop-in replacement for the OpenAI SDK.",
+  "main": "index.js",
+  "bin": {
+    "secure-llm-proxy": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["mcp", "openai", "proxy", "privacy", "llm", "audit", "pii"],
+  "author": "Nexus AI",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "mcp": {
+    "server_url": "https://nexus.exchange-secure.com/mcp",
+    "auth": {
+      "type": "api_key",
+      "header": "Authorization",
+      "scheme": "Bearer"
+    }
+  }
+}
